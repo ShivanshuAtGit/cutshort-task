@@ -1,0 +1,48 @@
+.indicator__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.indicator__list-item {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid rgb(216, 216, 216);
+  margin-right: 6rem;
+  position: relative;
+}
+
+.indicator__list-item:last-of-type {
+  margin-right: 0;
+}
+
+.indicator__list-item.border-primary {
+  background-color: #5a4ad1;
+  border: transparent;
+  color: white;
+}
+
+.indicator__list-item-line {
+  position: absolute;
+  height: 2px;
+  width: 3rem;
+  background-color: rgb(216, 216, 216);
+}
+
+.indicator__list-item-line.line-left {
+  right: -3rem;
+}
+
+.indicator__list-item-line.line-right {
+  right: -6rem;
+}
+
+.indicator__list-item-line.bg-primary {
+  background-color: #5a4ad18f;
+}

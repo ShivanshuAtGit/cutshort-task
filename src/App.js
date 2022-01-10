@@ -1,24 +1,16 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Indicator from './components/Indicator';
 
 function App() {
+  const [steps, setSteps] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <section className='app__container'>
+        <h2>Eden</h2>
+        <Indicator stepsLength={4} completedTill={2} />
+      </section>
+    </main>
   );
 }
 
