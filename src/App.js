@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
-import './App.css';
-import Indicator from './components/Indicator';
-import CardWrapper from './components/CardWrapper';
+import React, { useState } from "react";
+import { IoLeaf } from "react-icons/io5";
+import "./App.css";
+import Indicator from "./components/Indicator";
+import UserDetails from "./containers/UserDetails";
 
 function App() {
   const [steps, setSteps] = useState(0);
   return (
     <main className="App">
-      <section className='app__container'>
-        <h2 className='app__head-title'>Eden</h2>
+      <section className="app__container">
+        <h2 className="app__head-title">
+          <IoLeaf className="logo" />
+          Eden
+        </h2>
         <Indicator stepsLength={4} completedTill={2} />
-        <CardWrapper >
-          Hi there
-        </CardWrapper>
+        <UserDetails />
       </section>
     </main>
   );

@@ -13,8 +13,10 @@
   width: 3.2rem;
   border-radius: 50%;
   background-color: white;
-  border: 1px solid rgb(216, 216, 216);
-  margin-right: 6rem;
+  font-weight: 500;
+  color: #777;
+  border: 1px solid #bdc5d6;
+  margin-right: 4rem;
   position: relative;
 }
 
@@ -30,17 +32,17 @@
 
 .indicator__list-item-line {
   position: absolute;
-  height: 2px;
-  width: 3rem;
-  background-color: rgb(216, 216, 216);
+  height: 1px;
+  width: 2rem;
+  background-color: #bdc5d675;
 }
 
 .indicator__list-item-line.line-left {
-  right: -3rem;
+  right: -2rem;
 }
 
 .indicator__list-item-line.line-right {
-  right: -6rem;
+  right: -4rem;
 }
 
 .indicator__list-item-line.bg-primary {

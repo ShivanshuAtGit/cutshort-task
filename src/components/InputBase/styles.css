@@ -1,0 +1,29 @@
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bdc5d6;
+}
+
+.inputBase {
+  margin: 2rem 0 1rem;
+  text-align: left;
+  min-width: 28rem;
+}
+
+.label {
+  display: inline-flex;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #bdc5d6;
+  border-radius: 0.5rem;
+  padding: 1rem 1.2rem;
+}
+
+.input:focus {
+  outline: none;
+}
