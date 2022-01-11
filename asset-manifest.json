@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cutshort-task/static/css/main.fd2d2bd2.css",
+    "main.js": "/cutshort-task/static/js/main.67117328.js",
+    "index.html": "/cutshort-task/index.html",
+    "main.fd2d2bd2.css.map": "/cutshort-task/static/css/main.fd2d2bd2.css.map",
+    "main.67117328.js.map": "/cutshort-task/static/js/main.67117328.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd2d2bd2.css",
+    "static/js/main.67117328.js"
+  ]
+}
