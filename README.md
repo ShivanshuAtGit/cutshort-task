@@ -1,7 +1,7 @@
-# Click on link here to see the project --> [onboarding-flow](https://shivanshuatgit.github.io/cutshort-task/#/)
+### Click on link here to see the project --> [onboarding-flow](https://shivanshuatgit.github.io/cutshort-task/#/)
 
 
-# To run this project run the following script
+## To run this project run the following script
 
 ### `npm start`
 
