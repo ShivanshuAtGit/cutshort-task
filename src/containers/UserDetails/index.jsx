@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import CardWrapper from "../../components/CardWrapper";
-import Button from "../../components/CardWrapper/Button";
+import Button from "../../components/Button";
 import InputBase from "../../components/InputBase";
+import { UserContext } from "../../context/userContext";
 import "./styles.css";
 
 const UserDetails = () => {
@@ -11,6 +13,16 @@ const UserDetails = () => {
   };
 
   const [values, setValues] = useState(initialValues);
+  const [steps, setSteps] = useContext(UserContext);
+  const history = useHistory();
+
+  const handleSubmit = (e) => {
+    if (values.username && values.displayName) {
+      e.preventDefault();
+      setSteps((prev) => prev + 1);
+      history.push("/workspace");
+    }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,7 +54,7 @@ const UserDetails = () => {
             value={values.displayName}
             onChange={handleChange}
           />
-          <Button label="Create Workspaces" />
+          <Button label="Create Workspaces" onClick={handleSubmit} />
         </form>
       </div>
     </CardWrapper>
