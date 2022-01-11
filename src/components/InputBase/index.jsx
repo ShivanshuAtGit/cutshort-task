@@ -2,8 +2,7 @@ import React from "react";
 import "./styles.css";
 
 const InputBase = (props) => {
-  const { label, id, ...inputProps } = props;
-  console.log(inputProps);
+  const { label, id, variant = "normal", text = "", ...inputProps } = props;
 
   return (
     <div className="inputBase">
@@ -11,7 +10,14 @@ const InputBase = (props) => {
         {label}
       </label>
       <br />
-      <input {...inputProps} id={id} className="input" />
+      {variant === "normal" ? (
+        <input {...inputProps} id={id} className="input" />
+      ) : (
+        <div className="input__wrapper">
+          <span>{text}</span>
+          <input {...inputProps} id={id} className="input" />
+        </div>
+      )}
     </div>
   );
 };

@@ -27,3 +27,23 @@
 .input:focus {
   outline: none;
 }
+
+.input__wrapper {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #bdc5d6;
+  border-radius: 0.5rem;
+}
+
+.input__wrapper span {
+  background-color: #bdc5d646;
+  padding: 1rem 1.2rem;
+  color: rgb(163, 162, 162);
+  font-weight: 500;
+}
+
+.input__wrapper input.input {
+  border-radius: 0;
+  border: none;
+  border-left: 1px solid #bdc5d6;
+}
