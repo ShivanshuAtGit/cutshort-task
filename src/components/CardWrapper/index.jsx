@@ -6,7 +6,7 @@ const CardWrapper = ({ title, subTitle, children }) => {
     <div className="card__wrapper">
       <h2 className="card__title">{title}</h2>
       <p className="card__subtitle">{subTitle}</p>
-      <div className="card__children">{children}</div>
+      {children && <div className="card__children">{children}</div>}
     </div>
   );
 };

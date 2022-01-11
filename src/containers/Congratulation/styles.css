@@ -1,0 +1,14 @@
+.done__icon-circle {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-color: #5a4ad1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.done__icon-circle .done__icon {
+  color: white !important;
+}

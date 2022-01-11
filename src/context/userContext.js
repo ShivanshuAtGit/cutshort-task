@@ -22,14 +22,21 @@ const UserProvider = ({ children }) => {
   const workspaceDetails = useState(initialValues.workspaceDetails);
   const stepData = useState(1);
 
-  const data = {
+  const resetData = () => {
+    userDetails[1](initialValues.userDetails);
+    workspaceDetails[1](initialValues.workspaceDetails);
+    baseDetails[1](initialValues.baseDetails);
+  }
+
+  const userProps = {
     stepData,
     userDetails,
     workspaceDetails,
     baseDetails,
+    resetData,
   };
 
-  return <UserContext.Provider value={data}>{children}</UserContext.Provider>;
+  return <UserContext.Provider value={userProps}>{children}</UserContext.Provider>;
 };
 
 export default UserProvider;
