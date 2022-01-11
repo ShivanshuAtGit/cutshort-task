@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  HashRouter as Router,
+} from "react-router-dom";
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { IconContext } from 'react-icons/lib';
+import UserProvider from './context/userContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <UserProvider>
+      <IconContext.Provider value={{ color: "#5a4ad1", size: 18 }}>
+        <Router>
+          <App />
+        </Router>
+      </IconContext.Provider >
+    </UserProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

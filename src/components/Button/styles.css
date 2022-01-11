@@ -1,0 +1,19 @@
+.btn {
+  background-color: #5a4ad1;
+  padding: 1rem 1.2rem;
+  min-width: 28rem;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin: 2rem 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.99);
+}

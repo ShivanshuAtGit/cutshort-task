@@ -1,0 +1,6 @@
+.base-cards__wrapper {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  transition: all 0.3s;
+}

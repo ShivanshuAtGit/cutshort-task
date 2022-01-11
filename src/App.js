@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import { Switch, Route } from "react-router-dom";
+import { IoLeaf } from "react-icons/io5";
+import Indicator from "./components/Indicator";
+import UserDetails from "./containers/UserDetails";
+import Workspace from "./containers/Workspace";
+import UserBase from "./containers/UserBase";
+import Congratulation from "./containers/Congratulation";
+import { UserContext } from './context/userContext';
+import "./App.css";
 
 function App() {
+  const { stepData } = useContext(UserContext);
+  const [steps] = stepData;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <section className="app__container">
+        <h2 className="app__head-title">
+          <IoLeaf className="logo" />
+          Eden
+        </h2>
+        <Indicator stepsLength={4} completedTill={steps} />
+        <Switch>
+          <Route exact path="/" component={UserDetails} />
+          <Route exact path="/workspace" component={Workspace} />
+          <Route exact path="/user-base" component={UserBase} />
+          <Route exact path="/completed" component={Congratulation} />
+        </Switch>
+      </section>
+    </main>
   );
 }
 

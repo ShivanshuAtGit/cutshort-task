@@ -1,0 +1,50 @@
+.indicator__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.indicator__list-item {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+  background-color: white;
+  font-weight: 500;
+  color: #777;
+  border: 1px solid #bdc5d6;
+  margin-right: 4rem;
+  position: relative;
+}
+
+.indicator__list-item:last-of-type {
+  margin-right: 0;
+}
+
+.indicator__list-item.border-primary {
+  background-color: #5a4ad1;
+  border: transparent;
+  color: white;
+}
+
+.indicator__list-item-line {
+  position: absolute;
+  height: 1px;
+  width: 2rem;
+  background-color: #bdc5d675;
+}
+
+.indicator__list-item-line.line-left {
+  right: -2rem;
+}
+
+.indicator__list-item-line.line-right {
+  right: -4rem;
+}
+
+.indicator__list-item-line.bg-primary {
+  background-color: #5a4ad18f;
+}
