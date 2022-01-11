@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import CardWrapper from "../../components/CardWrapper";
 import Button from "../../components/Button";
@@ -7,13 +7,9 @@ import { UserContext } from "../../context/userContext";
 import "./styles.css";
 
 const UserDetails = () => {
-  const initialValues = {
-    username: "",
-    displayName: "",
-  };
-
-  const [values, setValues] = useState(initialValues);
-  const [steps, setSteps] = useContext(UserContext);
+  const { stepData, userDetails } = useContext(UserContext);
+  const [values, setValues] = userDetails;
+  const [steps, setSteps] = stepData;
   const history = useHistory();
 
   const handleSubmit = (e) => {
@@ -28,6 +24,10 @@ const UserDetails = () => {
     const { name, value } = e.target;
     setValues((prev) => ({ ...prev, [name]: value }));
   };
+
+  useEffect(() => {
+    setSteps(1);
+  }, []);
 
   return (
     <CardWrapper

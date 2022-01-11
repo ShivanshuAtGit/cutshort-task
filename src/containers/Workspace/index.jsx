@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import CardWrapper from "../../components/CardWrapper";
 import InputBase from "../../components/InputBase";
@@ -7,13 +7,9 @@ import { UserContext } from "../../context/userContext";
 import "./styles.css";
 
 const Workspace = () => {
-  const initialValues = {
-    workspaceName: "",
-    url: "",
-  };
-
-  const [values, setValues] = useState(initialValues);
-  const [steps, setSteps] = useContext(UserContext);
+  const { stepData, workspaceDetails } = useContext(UserContext);
+  const [values, setValues] = workspaceDetails;
+  const [steps, setSteps] = stepData;
   const history = useHistory();
 
   const handleSubmit = (e) => {
@@ -28,6 +24,11 @@ const Workspace = () => {
     const { name, value } = e.target;
     setValues((prev) => ({ ...prev, [name]: value }));
   };
+
+  useEffect(() => {
+    if (steps < 2) history.push("/");
+    setSteps(2);
+  }, []);
 
   const Label = () => {
     return (

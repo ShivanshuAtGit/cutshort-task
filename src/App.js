@@ -10,7 +10,8 @@ import { UserContext } from './context/userContext';
 import "./App.css";
 
 function App() {
-  const [steps] = useContext(UserContext);
+  const { stepData } = useContext(UserContext);
+  const [steps] = stepData;
 
   return (
     <main className="App">
